@@ -1,0 +1,8 @@
+<h2>Editing: {{post.model.title}} {{post.model.body}}</h2>
+<ul class="post-list">
+  {{#each post in model itemController="post"}}
+  <h2 class="post-title">{{post.model.title}}</h2>
+  <div class="post-body">{{post.model.body}}</div>
+  <button {{action 'destroy'}}>X</button>
+  {{/each}}
+</ul>

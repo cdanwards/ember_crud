@@ -1,0 +1,16 @@
+{{#link-to "posts.new"}}Post{{/link-to}}
+
+{{outlet}}
+
+<div class="main">
+  <ul class="post-list">
+    {{#each post in model itemController="post"}}
+    <h2 class="post-title">{{post.model.title}}</h2>
+    <div class="post-body">{{post.model.body}}</div>
+    <button {{action 'edit'}}>Edit</button>
+    <button {{action 'destroy'}}>Delete</button>
+    {{/each}}
+  </ul>
+
+
+</div>
